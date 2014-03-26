@@ -1,0 +1,16 @@
+[
+	{
+		"keys": ["ctrl+alt+'"],
+		"command": "quote_html",
+		"args": {
+			"action": "single"
+		}
+	},
+	{
+		"keys": ["ctrl+alt+shift+'"],
+		"command": "quote_html",
+		"args": {
+			"action": "double"
+		}
+	}
+]

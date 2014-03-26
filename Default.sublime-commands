@@ -1,0 +1,4 @@
+[
+    { "caption": "Quote 'HTML'",      "command": "quote_html",    "args": { "action": "single" }  },
+    { "caption": "Quote \"HTML\"",    "command": "quote_html",    "args": { "action": "double" }  }
+]
