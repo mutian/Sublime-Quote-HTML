@@ -19,7 +19,7 @@ Quote HTML snippet as a string.
 			</ol>
 		</div>
 
-* Quote HTML as Single Quotes:
+* Quote HTML with Single Quotes:
 
 		'<div class="demo">' +
 			'<ol>' +
@@ -29,7 +29,7 @@ Quote HTML snippet as a string.
 			'</ol>' +
 		'</div>';
 
-* Quote HTML as Double Quotes:
+* Quote HTML with Double Quotes:
 
 		"<div class=\"demo\">" +
 			"<ol>" +
