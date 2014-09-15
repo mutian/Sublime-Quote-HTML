@@ -37,6 +37,16 @@ class QuoteHtmlCommand(sublime_plugin.TextCommand):
 				lines[i] = re.sub(r'(?!\\)"', r'\\"', lines[i])
 				lines[i] = re.sub(r'(\s*)(\S+(\s+\S+)*)\s*', r'\1"\2" +', lines[i])
 
+		elif action == 'single-ws':
+			for i in range(len(lines)):
+				lines[i] = re.sub(r'(?!\\)\'', r"\\'", lines[i])
+				lines[i] = re.sub(r'(\s*)(\S+(\s+\S+)*)\s*', r"'\1\2' +", lines[i])
+
+		elif action == 'double-ws':
+			for i in range(len(lines)):
+				lines[i] = re.sub(r'(?!\\)"', r'\\"', lines[i])
+				lines[i] = re.sub(r'(\s*)(\S+(\s+\S+)*)\s*', r'"\1\2" +', lines[i])
+
 		code = '\n'.join(lines)
 		code = re.sub(r'(\s\S)*? \+$', r"\1;", code)
 

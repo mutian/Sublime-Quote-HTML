@@ -39,6 +39,26 @@ Quote HTML snippet as a string.
 			"</ol>" +
 		"</div>";
 
+* Quote HTML with Single Quotes include Space:
+
+		'<div class="demo">' +
+		'    <ol>' +
+		'        <li>3</li>' +
+		'        <li><a href=\'#\'>2</a></li>' +
+		'        <li><a href="#">3</a></li>' +
+		'    </ol>' +
+		'</div>';
+
+* Quote HTML with Double Quotes include Space:
+
+		"<div class=\"demo\">" +
+		"    <ol>" +
+		"        <li>3</li>" +
+		"        <li><a href='#'>2</a></li>" +
+		"        <li><a href=\"#\">3</a></li>" +
+		"    </ol>" +
+		"</div>";
+
 
 Installation
 ------------

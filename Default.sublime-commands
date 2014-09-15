@@ -1,4 +1,6 @@
 [
     { "caption": "Quote 'HTML'",      "command": "quote_html",    "args": { "action": "single" }  },
-    { "caption": "Quote \"HTML\"",    "command": "quote_html",    "args": { "action": "double" }  }
+    { "caption": "Quote \"HTML\"",    "command": "quote_html",    "args": { "action": "double" }  },
+    { "caption": "Quote '  <HTML>'",      "command": "quote_html",    "args": { "action": "single-ws" }  },
+    { "caption": "Quote \"  <HTML>\"",    "command": "quote_html",    "args": { "action": "double-ws" }  }
 ]
