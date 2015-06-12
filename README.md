@@ -11,53 +11,63 @@ Quote HTML snippet as a string.
 
 * Original HTML:
 
-		<div class="demo">
-			<ol>
-				<li>3</li>
-				<li><a href='#'>2</a></li>
-				<li><a href="#">3</a></li>
-			</ol>
-		</div>
+	```html
+	<div class="demo">
+		<ol>
+			<li>3</li>
+			<li><a href='#'>2</a></li>
+			<li><a href="#">3</a></li>
+		</ol>
+	</div>
+	```
 
 * Quote HTML with Single Quotes:
 
-		'<div class="demo">' +
-			'<ol>' +
-				'<li>3</li>' +
-				'<li><a href=\'#\'>2</a></li>' +
-				'<li><a href="#">3</a></li>' +
-			'</ol>' +
-		'</div>';
+	```js
+	'<div class="demo">' +
+		'<ol>' +
+			'<li>3</li>' +
+			'<li><a href=\'#\'>2</a></li>' +
+			'<li><a href="#">3</a></li>' +
+		'</ol>' +
+	'</div>';
+	```
 
 * Quote HTML with Double Quotes:
 
-		"<div class=\"demo\">" +
-			"<ol>" +
-				"<li>3</li>" +
-				"<li><a href='#'>2</a></li>" +
-				"<li><a href=\"#\">3</a></li>" +
-			"</ol>" +
-		"</div>";
+	```js
+	"<div class=\"demo\">" +
+		"<ol>" +
+			"<li>3</li>" +
+			"<li><a href='#'>2</a></li>" +
+			"<li><a href=\"#\">3</a></li>" +
+		"</ol>" +
+	"</div>";
+	```
 
 * Quote HTML with Single Quotes include Space:
 
-		'<div class="demo">' +
-		'    <ol>' +
-		'        <li>3</li>' +
-		'        <li><a href=\'#\'>2</a></li>' +
-		'        <li><a href="#">3</a></li>' +
-		'    </ol>' +
-		'</div>';
+	```js
+	'<div class="demo">' +
+	'    <ol>' +
+	'        <li>3</li>' +
+	'        <li><a href=\'#\'>2</a></li>' +
+	'        <li><a href="#">3</a></li>' +
+	'    </ol>' +
+	'</div>';
+	```
 
 * Quote HTML with Double Quotes include Space:
 
-		"<div class=\"demo\">" +
-		"    <ol>" +
-		"        <li>3</li>" +
-		"        <li><a href='#'>2</a></li>" +
-		"        <li><a href=\"#\">3</a></li>" +
-		"    </ol>" +
-		"</div>";
+	```js
+	"<div class=\"demo\">" +
+	"    <ol>" +
+	"        <li>3</li>" +
+	"        <li><a href='#'>2</a></li>" +
+	"        <li><a href=\"#\">3</a></li>" +
+	"    </ol>" +
+	"</div>";
+	```
 
 
 Installation
@@ -78,7 +88,9 @@ The easiest way to install this package is through Package Control.
 
 Clone the repository in your Sublime Text "Packages" directory:
 
-    git clone git://github.com/mutian/Sublime-Quote-HTML.git "QuoteHTML"
+```shell
+git clone git://github.com/mutian/Sublime-Quote-HTML.git "QuoteHTML"
+```
 
 You can find your "Packages" inside the following directories:
 
@@ -114,6 +126,6 @@ By default QuoteHTML provides no keyboard shortcuts to avoid conflicts, but you 
 Author
 ------
 
-Created by **Mutian** ([http://mutian.info](http://mutian.info/)).
+Created by **Mutian** ([http://mutian.wang](http://mutian.wang/)).
 
 For more info, you can send email to me: mutian(a)me.com!
