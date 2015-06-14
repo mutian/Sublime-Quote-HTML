@@ -1,6 +1,10 @@
 [
-    { "caption": "Quote 'HTML'",      "command": "quote_html",    "args": { "action": "single" }  },
-    { "caption": "Quote \"HTML\"",    "command": "quote_html",    "args": { "action": "double" }  },
-    { "caption": "Quote '  <HTML>'",      "command": "quote_html",    "args": { "action": "single-ws" }  },
-    { "caption": "Quote \"  <HTML>\"",    "command": "quote_html",    "args": { "action": "double-ws" }  }
+    { "command": "quote_html",  "args": { "action": "single" },         "caption": "Quote '<HTML> +'" },
+    { "command": "quote_html",  "args": { "action": "double" },         "caption": "Quote \"<HTML> +\"" },
+    { "command": "quote_html",  "args": { "action": "single-ws" },      "caption": "Quote '  <HTML> +'" },
+    { "command": "quote_html",  "args": { "action": "double-ws" },      "caption": "Quote \"  <HTML> +\"" },
+    { "command": "quote_html",  "args": { "action": "single-ar" },      "caption": "Quote ['<HTML>','</HTML>']" },
+    { "command": "quote_html",  "args": { "action": "double-ar" },      "caption": "Quote [\"<HTML>\",\"</HTML>\"]" },
+    { "command": "quote_html",  "args": { "action": "single-ws-ar" },   "caption": "Quote ['  <HTML>','  </HTML>']" },
+    { "command": "quote_html",  "args": { "action": "double-ws-ar" },   "caption": "Quote [\"  <HTML>\",\"  </HTML>\"]" }
 ]

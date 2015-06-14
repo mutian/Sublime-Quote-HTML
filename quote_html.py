@@ -23,31 +23,36 @@ class QuoteHtmlCommand(sublime_plugin.TextCommand):
 			code = self.quote(code, action)
 			view.replace(edit, region, code)
 
-
 	def quote(self, code, action):
 		lines = code.split('\n')
 
-		if action == 'single':
+		if re.search('-ar', action):
+			indentation = '\t'
+			connector = ','
+		else:
+			indentation = ''
+			connector = ' +'
+
+		if re.search('single', action):
 			for i in range(len(lines)):
 				lines[i] = re.sub(r'(?!\\)\'', r"\\'", lines[i])
-				lines[i] = re.sub(r'(\s*)(\S+(\s+\S+)*)\s*', r"\1'\2' +", lines[i])
-
-		elif action == 'double':
+				if re.search('-ws', action):
+					lines[i] = re.sub(r'(\s*)(\S+(\s+\S+)*)\s*', indentation + r"'\1\2'" + connector, lines[i])
+				else:
+					lines[i] = re.sub(r'(\s*)(\S+(\s+\S+)*)\s*', indentation + r"\1'\2'" + connector, lines[i])
+		elif re.search('double', action):
 			for i in range(len(lines)):
 				lines[i] = re.sub(r'(?!\\)"', r'\\"', lines[i])
-				lines[i] = re.sub(r'(\s*)(\S+(\s+\S+)*)\s*', r'\1"\2" +', lines[i])
-
-		elif action == 'single-ws':
-			for i in range(len(lines)):
-				lines[i] = re.sub(r'(?!\\)\'', r"\\'", lines[i])
-				lines[i] = re.sub(r'(\s*)(\S+(\s+\S+)*)\s*', r"'\1\2' +", lines[i])
-
-		elif action == 'double-ws':
-			for i in range(len(lines)):
-				lines[i] = re.sub(r'(?!\\)"', r'\\"', lines[i])
-				lines[i] = re.sub(r'(\s*)(\S+(\s+\S+)*)\s*', r'"\1\2" +', lines[i])
+				if re.search('-ws', action):
+					lines[i] = re.sub(r'(\s*)(\S+(\s+\S+)*)\s*', indentation + r'"\1\2"' + connector, lines[i])
+				else:
+					lines[i] = re.sub(r'(\s*)(\S+(\s+\S+)*)\s*', indentation + r'\1"\2"' + connector, lines[i])
 
 		code = '\n'.join(lines)
-		code = re.sub(r'(\s\S)*? \+$', r"\1;", code)
+
+		if re.search('-ar', action):
+			code = re.sub(r'^([\s\S]*),$', r'[\n\1\n].join("");', code)
+		else:
+			code = re.sub(r'(.*) \+$', r'\1;', code)
 
 		return code

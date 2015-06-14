@@ -14,7 +14,7 @@ Quote HTML snippet as a string.
 	```html
 	<div class="demo">
 		<ol>
-			<li>3</li>
+			<li>1</li>
 			<li><a href='#'>2</a></li>
 			<li><a href="#">3</a></li>
 		</ol>
@@ -26,7 +26,7 @@ Quote HTML snippet as a string.
 	```js
 	'<div class="demo">' +
 		'<ol>' +
-			'<li>3</li>' +
+			'<li>1</li>' +
 			'<li><a href=\'#\'>2</a></li>' +
 			'<li><a href="#">3</a></li>' +
 		'</ol>' +
@@ -38,7 +38,7 @@ Quote HTML snippet as a string.
 	```js
 	"<div class=\"demo\">" +
 		"<ol>" +
-			"<li>3</li>" +
+			"<li>1</li>" +
 			"<li><a href='#'>2</a></li>" +
 			"<li><a href=\"#\">3</a></li>" +
 		"</ol>" +
@@ -50,7 +50,7 @@ Quote HTML snippet as a string.
 	```js
 	'<div class="demo">' +
 	'    <ol>' +
-	'        <li>3</li>' +
+	'        <li>1</li>' +
 	'        <li><a href=\'#\'>2</a></li>' +
 	'        <li><a href="#">3</a></li>' +
 	'    </ol>' +
@@ -62,11 +62,67 @@ Quote HTML snippet as a string.
 	```js
 	"<div class=\"demo\">" +
 	"    <ol>" +
-	"        <li>3</li>" +
+	"        <li>1</li>" +
 	"        <li><a href='#'>2</a></li>" +
 	"        <li><a href=\"#\">3</a></li>" +
 	"    </ol>" +
 	"</div>";
+	```
+
+* Quote HTML as Array with Single Quotes:
+
+	```js
+	[
+		'<div class="demo">',
+			'<ol>',
+				'<li>1</li>',
+				'<li><a href=\'#\'>2</a></li>',
+				'<li><a href="#">3</a></li>',
+			'</ol>',
+		'</div>'
+	].join("");
+	```
+
+* Quote HTML as Array with Double Quotes:
+
+	```js
+	[
+		"<div class=\"demo\">",
+			"<ol>",
+				"<li>1</li>",
+				"<li><a href='#'>2</a></li>",
+				"<li><a href=\"#\">3</a></li>",
+			"</ol>",
+		"</div>"
+	].join("");
+	```
+
+* Quote HTML as Array with Single Quotes include Space:
+
+	```js
+	[
+		'<div class="demo">',
+		'	<ol>',
+		'		<li>1</li>',
+		'		<li><a href=\'#\'>2</a></li>',
+		'		<li><a href="#">3</a></li>',
+		'	</ol>',
+		'</div>'
+	].join("");
+	```
+
+* Quote HTML as Array with Double Quotes include Space:
+
+	```js
+	[
+		"<div class=\"demo\">",
+		"	<ol>",
+		"		<li>1</li>",
+		"		<li><a href='#'>2</a></li>",
+		"		<li><a href=\"#\">3</a></li>",
+		"	</ol>",
+		"</div>"
+	].join("");
 	```
 
 
