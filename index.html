@@ -2,9 +2,9 @@
 <html>
 
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="QuoteHTML for Sublime : Quote HTML snippet as a string." />
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="QuoteHTML for Sublime : Quote HTML snippet as a string.">
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
@@ -32,7 +32,7 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <h2>
-<a name="description" class="anchor" href="#description"><span class="octicon octicon-link"></span></a>Description</h2>
+<a id="description" class="anchor" href="#description" aria-hidden="true"><span class="octicon octicon-link"></span></a>Description</h2>
 
 <p>Quote HTML snippet as a string.</p>
 
@@ -42,41 +42,114 @@
 <li>
 <p>Original HTML:</p>
 
-<pre><code>&lt;div class="demo"&gt;
-    &lt;ol&gt;
-        &lt;li&gt;3&lt;/li&gt;
-        &lt;li&gt;&lt;a href='#'&gt;2&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
-    &lt;/ol&gt;
-&lt;/div&gt;
-</code></pre>
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>demo<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">ol</span>&gt;
+        &lt;<span class="pl-ent">li</span>&gt;1&lt;/<span class="pl-ent">li</span>&gt;
+        &lt;<span class="pl-ent">li</span>&gt;&lt;<span class="pl-ent">a</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">'</span>#<span class="pl-pds">'</span></span>&gt;2&lt;/<span class="pl-ent">a</span>&gt;&lt;/<span class="pl-ent">li</span>&gt;
+        &lt;<span class="pl-ent">li</span>&gt;&lt;<span class="pl-ent">a</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>#<span class="pl-pds">"</span></span>&gt;3&lt;/<span class="pl-ent">a</span>&gt;&lt;/<span class="pl-ent">li</span>&gt;
+    &lt;/<span class="pl-ent">ol</span>&gt;
+&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
 </li>
 <li>
 <p>Quote HTML with Single Quotes:</p>
 
-<pre><code>'&lt;div class="demo"&gt;' +
-    '&lt;ol&gt;' +
-        '&lt;li&gt;3&lt;/li&gt;' +
-        '&lt;li&gt;&lt;a href=\'#\'&gt;2&lt;/a&gt;&lt;/li&gt;' +
-        '&lt;li&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/li&gt;' +
-    '&lt;/ol&gt;' +
-'&lt;/div&gt;';
-</code></pre>
+<div class="highlight highlight-js"><pre><span class="pl-s"><span class="pl-pds">'</span>&lt;div class="demo"&gt;<span class="pl-pds">'</span></span> <span class="pl-k">+</span>
+    <span class="pl-s"><span class="pl-pds">'</span>&lt;ol&gt;<span class="pl-pds">'</span></span> <span class="pl-k">+</span>
+        <span class="pl-s"><span class="pl-pds">'</span>&lt;li&gt;1&lt;/li&gt;<span class="pl-pds">'</span></span> <span class="pl-k">+</span>
+        <span class="pl-s"><span class="pl-pds">'</span>&lt;li&gt;&lt;a href=<span class="pl-cce">\'</span>#<span class="pl-cce">\'</span>&gt;2&lt;/a&gt;&lt;/li&gt;<span class="pl-pds">'</span></span> <span class="pl-k">+</span>
+        <span class="pl-s"><span class="pl-pds">'</span>&lt;li&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/li&gt;<span class="pl-pds">'</span></span> <span class="pl-k">+</span>
+    <span class="pl-s"><span class="pl-pds">'</span>&lt;/ol&gt;<span class="pl-pds">'</span></span> <span class="pl-k">+</span>
+<span class="pl-s"><span class="pl-pds">'</span>&lt;/div&gt;<span class="pl-pds">'</span></span>;</pre></div>
 </li>
 <li>
 <p>Quote HTML with Double Quotes:</p>
 
-<pre><code>"&lt;div class=\"demo\"&gt;" +
-    "&lt;ol&gt;" +
-        "&lt;li&gt;3&lt;/li&gt;" +
-        "&lt;li&gt;&lt;a href='#'&gt;2&lt;/a&gt;&lt;/li&gt;" +
-        "&lt;li&gt;&lt;a href=\"#\"&gt;3&lt;/a&gt;&lt;/li&gt;" +
-    "&lt;/ol&gt;" +
-"&lt;/div&gt;";
-</code></pre>
+<div class="highlight highlight-js"><pre><span class="pl-s"><span class="pl-pds">"</span>&lt;div class=<span class="pl-cce">\"</span>demo<span class="pl-cce">\"</span>&gt;<span class="pl-pds">"</span></span> <span class="pl-k">+</span>
+    <span class="pl-s"><span class="pl-pds">"</span>&lt;ol&gt;<span class="pl-pds">"</span></span> <span class="pl-k">+</span>
+        <span class="pl-s"><span class="pl-pds">"</span>&lt;li&gt;1&lt;/li&gt;<span class="pl-pds">"</span></span> <span class="pl-k">+</span>
+        <span class="pl-s"><span class="pl-pds">"</span>&lt;li&gt;&lt;a href='#'&gt;2&lt;/a&gt;&lt;/li&gt;<span class="pl-pds">"</span></span> <span class="pl-k">+</span>
+        <span class="pl-s"><span class="pl-pds">"</span>&lt;li&gt;&lt;a href=<span class="pl-cce">\"</span>#<span class="pl-cce">\"</span>&gt;3&lt;/a&gt;&lt;/li&gt;<span class="pl-pds">"</span></span> <span class="pl-k">+</span>
+    <span class="pl-s"><span class="pl-pds">"</span>&lt;/ol&gt;<span class="pl-pds">"</span></span> <span class="pl-k">+</span>
+<span class="pl-s"><span class="pl-pds">"</span>&lt;/div&gt;<span class="pl-pds">"</span></span>;</pre></div>
 </li>
-</ul><h2>
-<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+<li>
+<p>Quote HTML with Single Quotes include Space:</p>
+
+<div class="highlight highlight-js"><pre><span class="pl-s"><span class="pl-pds">'</span>&lt;div class="demo"&gt;<span class="pl-pds">'</span></span> <span class="pl-k">+</span>
+<span class="pl-s"><span class="pl-pds">'</span>    &lt;ol&gt;<span class="pl-pds">'</span></span> <span class="pl-k">+</span>
+<span class="pl-s"><span class="pl-pds">'</span>        &lt;li&gt;1&lt;/li&gt;<span class="pl-pds">'</span></span> <span class="pl-k">+</span>
+<span class="pl-s"><span class="pl-pds">'</span>        &lt;li&gt;&lt;a href=<span class="pl-cce">\'</span>#<span class="pl-cce">\'</span>&gt;2&lt;/a&gt;&lt;/li&gt;<span class="pl-pds">'</span></span> <span class="pl-k">+</span>
+<span class="pl-s"><span class="pl-pds">'</span>        &lt;li&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/li&gt;<span class="pl-pds">'</span></span> <span class="pl-k">+</span>
+<span class="pl-s"><span class="pl-pds">'</span>    &lt;/ol&gt;<span class="pl-pds">'</span></span> <span class="pl-k">+</span>
+<span class="pl-s"><span class="pl-pds">'</span>&lt;/div&gt;<span class="pl-pds">'</span></span>;</pre></div>
+</li>
+<li>
+<p>Quote HTML with Double Quotes include Space:</p>
+
+<div class="highlight highlight-js"><pre><span class="pl-s"><span class="pl-pds">"</span>&lt;div class=<span class="pl-cce">\"</span>demo<span class="pl-cce">\"</span>&gt;<span class="pl-pds">"</span></span> <span class="pl-k">+</span>
+<span class="pl-s"><span class="pl-pds">"</span>    &lt;ol&gt;<span class="pl-pds">"</span></span> <span class="pl-k">+</span>
+<span class="pl-s"><span class="pl-pds">"</span>        &lt;li&gt;1&lt;/li&gt;<span class="pl-pds">"</span></span> <span class="pl-k">+</span>
+<span class="pl-s"><span class="pl-pds">"</span>        &lt;li&gt;&lt;a href='#'&gt;2&lt;/a&gt;&lt;/li&gt;<span class="pl-pds">"</span></span> <span class="pl-k">+</span>
+<span class="pl-s"><span class="pl-pds">"</span>        &lt;li&gt;&lt;a href=<span class="pl-cce">\"</span>#<span class="pl-cce">\"</span>&gt;3&lt;/a&gt;&lt;/li&gt;<span class="pl-pds">"</span></span> <span class="pl-k">+</span>
+<span class="pl-s"><span class="pl-pds">"</span>    &lt;/ol&gt;<span class="pl-pds">"</span></span> <span class="pl-k">+</span>
+<span class="pl-s"><span class="pl-pds">"</span>&lt;/div&gt;<span class="pl-pds">"</span></span>;</pre></div>
+</li>
+<li>
+<p>Quote HTML as Array with Single Quotes:</p>
+
+<div class="highlight highlight-js"><pre>[
+    <span class="pl-s"><span class="pl-pds">'</span>&lt;div class="demo"&gt;<span class="pl-pds">'</span></span>,
+        <span class="pl-s"><span class="pl-pds">'</span>&lt;ol&gt;<span class="pl-pds">'</span></span>,
+            <span class="pl-s"><span class="pl-pds">'</span>&lt;li&gt;1&lt;/li&gt;<span class="pl-pds">'</span></span>,
+            <span class="pl-s"><span class="pl-pds">'</span>&lt;li&gt;&lt;a href=<span class="pl-cce">\'</span>#<span class="pl-cce">\'</span>&gt;2&lt;/a&gt;&lt;/li&gt;<span class="pl-pds">'</span></span>,
+            <span class="pl-s"><span class="pl-pds">'</span>&lt;li&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/li&gt;<span class="pl-pds">'</span></span>,
+        <span class="pl-s"><span class="pl-pds">'</span>&lt;/ol&gt;<span class="pl-pds">'</span></span>,
+    <span class="pl-s"><span class="pl-pds">'</span>&lt;/div&gt;<span class="pl-pds">'</span></span>
+].<span class="pl-c1">join</span>(<span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>);</pre></div>
+</li>
+<li>
+<p>Quote HTML as Array with Double Quotes:</p>
+
+<div class="highlight highlight-js"><pre>[
+    <span class="pl-s"><span class="pl-pds">"</span>&lt;div class=<span class="pl-cce">\"</span>demo<span class="pl-cce">\"</span>&gt;<span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>&lt;ol&gt;<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>&lt;li&gt;1&lt;/li&gt;<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>&lt;li&gt;&lt;a href='#'&gt;2&lt;/a&gt;&lt;/li&gt;<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>&lt;li&gt;&lt;a href=<span class="pl-cce">\"</span>#<span class="pl-cce">\"</span>&gt;3&lt;/a&gt;&lt;/li&gt;<span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>&lt;/ol&gt;<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>&lt;/div&gt;<span class="pl-pds">"</span></span>
+].<span class="pl-c1">join</span>(<span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>);</pre></div>
+</li>
+<li>
+<p>Quote HTML as Array with Single Quotes include Space:</p>
+
+<div class="highlight highlight-js"><pre>[
+    <span class="pl-s"><span class="pl-pds">'</span>&lt;div class="demo"&gt;<span class="pl-pds">'</span></span>,
+    <span class="pl-s"><span class="pl-pds">'</span>   &lt;ol&gt;<span class="pl-pds">'</span></span>,
+    <span class="pl-s"><span class="pl-pds">'</span>       &lt;li&gt;1&lt;/li&gt;<span class="pl-pds">'</span></span>,
+    <span class="pl-s"><span class="pl-pds">'</span>       &lt;li&gt;&lt;a href=<span class="pl-cce">\'</span>#<span class="pl-cce">\'</span>&gt;2&lt;/a&gt;&lt;/li&gt;<span class="pl-pds">'</span></span>,
+    <span class="pl-s"><span class="pl-pds">'</span>       &lt;li&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/li&gt;<span class="pl-pds">'</span></span>,
+    <span class="pl-s"><span class="pl-pds">'</span>   &lt;/ol&gt;<span class="pl-pds">'</span></span>,
+    <span class="pl-s"><span class="pl-pds">'</span>&lt;/div&gt;<span class="pl-pds">'</span></span>
+].<span class="pl-c1">join</span>(<span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>);</pre></div>
+</li>
+<li>
+<p>Quote HTML as Array with Double Quotes include Space:</p>
+
+<div class="highlight highlight-js"><pre>[
+    <span class="pl-s"><span class="pl-pds">"</span>&lt;div class=<span class="pl-cce">\"</span>demo<span class="pl-cce">\"</span>&gt;<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>   &lt;ol&gt;<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>       &lt;li&gt;1&lt;/li&gt;<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>       &lt;li&gt;&lt;a href='#'&gt;2&lt;/a&gt;&lt;/li&gt;<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>       &lt;li&gt;&lt;a href=<span class="pl-cce">\"</span>#<span class="pl-cce">\"</span>&gt;3&lt;/a&gt;&lt;/li&gt;<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>   &lt;/ol&gt;<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>&lt;/div&gt;<span class="pl-pds">"</span></span>
+].<span class="pl-c1">join</span>(<span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>);</pre></div>
+</li>
+</ul>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
 
 <p><strong>OPTION 1 - with Package Control (recommended)</strong></p>
 
@@ -86,12 +159,13 @@
 <li><p>Install <a href="https://sublime.wbond.net/installation">Package Control</a>, follow instructions on the website.</p></li>
 <li><p>Open command panel: <code>Ctrl+Shift+P</code> (Linux/Windows) or <code>Cmd+Shift+P</code> (OS X) and select <strong>Package Control: Install Package</strong>.</p></li>
 <li><p>When packages list appears, type <code>QuoteHTML</code> and select it.</p></li>
-</ol><p><strong>OPTION 2 - with Git</strong></p>
+</ol>
+
+<p><strong>OPTION 2 - with Git</strong></p>
 
 <p>Clone the repository in your Sublime Text "Packages" directory:</p>
 
-<pre><code>git clone git://github.com/mutian/Sublime-Quote-HTML.git "QuoteHTML"
-</code></pre>
+<div class="highlight highlight-shell"><pre>git clone git://github.com/mutian/Sublime-Quote-HTML.git <span class="pl-s"><span class="pl-pds">"</span>QuoteHTML<span class="pl-pds">"</span></span></pre></div>
 
 <p>You can find your "Packages" inside the following directories:</p>
 
@@ -102,26 +176,30 @@
 <code>%APPDATA%/Sublime Text 2/Packages/</code></p></li>
 <li><p>Linux:
 <code>~/.Sublime Text 2/Packages/</code></p></li>
-</ul><p><strong>OPTION 3 - without Git</strong></p>
+</ul>
+
+<p><strong>OPTION 3 - without Git</strong></p>
 
 <p>Download the latest source zip from <a href="https://github.com/mutian/Sublime-Quote-HTML">Github</a> and extract it into a new folder named <code>QuoteHTML</code> in your Sublime Text "Packages" folder.</p>
 
 <h2>
-<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
 
 <p>Select the code, or place cursor in the document, and execute commands in one of the following ways:</p>
 
 <ul>
 <li>Command Panel: Open command panel: <code>Ctrl+Shift+P</code> (Linux/Windows) or <code>Cmd+Shift+P</code> (OS X) and select <strong>Quote HTML</strong>.</li>
-</ul><h2>
-<a name="shortcuts" class="anchor" href="#shortcuts"><span class="octicon octicon-link"></span></a>Shortcuts</h2>
+</ul>
+
+<h2>
+<a id="shortcuts" class="anchor" href="#shortcuts" aria-hidden="true"><span class="octicon octicon-link"></span></a>Shortcuts</h2>
 
 <p>By default QuoteHTML provides no keyboard shortcuts to avoid conflicts, but you can view the included <code>Example.sublime-keymaps</code> file to get an idea how to set up your own.</p>
 
 <h2>
-<a name="author" class="anchor" href="#author"><span class="octicon octicon-link"></span></a>Author</h2>
+<a id="author" class="anchor" href="#author" aria-hidden="true"><span class="octicon octicon-link"></span></a>Author</h2>
 
-<p>Created by <strong>Mutian</strong> (<a href="http://mutian.info/">http://mutian.info</a>).</p>
+<p>Created by <strong>Mutian</strong> (<a href="http://mutian.wang/">http://mutian.wang</a>).</p>
 
 <p>For more info, you can send email to me: mutian(a)me.com!</p>
       </section>
@@ -131,7 +209,7 @@
     <div id="footer_wrap" class="outer">
       <footer class="inner">
         <p class="copyright">QuoteHTML for Sublime maintained by <a href="https://github.com/mutian">mutian</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
 
