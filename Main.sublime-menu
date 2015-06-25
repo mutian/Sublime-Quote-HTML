@@ -3,8 +3,11 @@
 		"id": "edit",
 		"children":
 		[
-			{ "id": "permute" },
 			{
+				"caption": "-"
+			}, 
+			{
+				"id": "quote_html",
 				"caption": "Quote HTML",
 				"children":
 				[
@@ -107,6 +110,5 @@
 				]
 			}
 		]
-
 	}
 ]
