@@ -170,6 +170,8 @@ Usage
 
 Select the code, or place cursor in the document, and execute commands in one of the following ways:
 
+* Edit Menu: **Edit &gt; Quote HTML**.
+
 * Command Panel: Open command panel: `Ctrl+Shift+P` (Linux/Windows) or `Cmd+Shift+P` (OS X) and select **Quote HTML**.
 
 
